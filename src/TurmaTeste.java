@@ -8,16 +8,14 @@ public class TurmaTeste {
 
   @BeforeEach
   public void setup() {
-    turma = new Turma();
-
-    turma.definirDia("qua");
-    turma.definirTurno("M");
-    turma.definirAtividades(4);
+    turma = new Turma(1, 4, "M");
   }
 
   @Test
-  public void retornarDiaDaSemana() {
-    assertEquals("qua", turma.diaDaSemana());
+  public void verificarDadosDoConstructor() {
+    assertEquals(1, turma.nivelDaTurma());
+    assertEquals(4, turma.diaDaSemana());
+    assertEquals("M", turma.turnoDaTurma());
   }
 
 }
