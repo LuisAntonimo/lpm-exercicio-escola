@@ -21,7 +21,7 @@ public class AlunoTeste {
 
   @Test
   public void testarConstructorComParametros() {
-    fulano = new Aluno("Luís", "15N", 18, new int[] {23, 21, 15, 23});
+    fulano = new Aluno("Luís", "15N", 18, new int[] {23, 21, 15, 23}, 1);
 
     assertEquals("Luís", fulano.retornarNome());
     assertEquals("15N", fulano.retornarTurma());

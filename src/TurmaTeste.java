@@ -31,4 +31,11 @@ public class TurmaTeste {
     assertEquals("14M", turma.codigo());
   }
 
+  @Test
+  public void adicionarAlunos() {
+    turma.adicionarAluno("Luis", 18, new int[] {23, 21, 15, 23});
+
+    turma.exibirRelatorio();
+  }
+
 }

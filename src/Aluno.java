@@ -1,23 +1,24 @@
 public class Aluno {
 
   private String nome, turma;
-  private int aulasAssistidas;
+  private int aulasAssistidas, matricula;
   double desempenho;
   private int[] notas = new int[4];
 
   Aluno() {
-    this.setup("Fulano", "", 0, new int[] {0, 0, 0, 0});
+    this.setup("Fulano", "", 0, new int[] {0, 0, 0, 0}, 0);
   }
 
-  public Aluno(String nome, String turma, int aulasAssistidas, int[] notas) {
-    this.setup(nome, turma, aulasAssistidas, notas);
+  public Aluno(String nome, String turma, int aulasAssistidas, int[] notas, int matricula) {
+    this.setup(nome, turma, aulasAssistidas, notas, matricula);
   }
 
-  private void setup(String nome, String turma, int aulasAssistidas, int[] notas) {
+  private void setup(String nome, String turma, int aulasAssistidas, int[] notas, int matricula) {
     this.definirNome(nome);
     this.definirTurma(turma);
     this.definirAulasAssistidas(aulasAssistidas);
     this.adicionarNotas(notas);
+    this.definirMatricula(matricula);
   }
 
   public void definirAulasAssistidas(int aulasAssistidas) {
@@ -40,6 +41,10 @@ public class Aluno {
     this.notas = notas;
   }
 
+  public void definirMatricula(int matricula) {
+    this.matricula = matricula;
+  }
+
   public String retornarNome() {
     return this.nome;
   }
@@ -50,6 +55,10 @@ public class Aluno {
 
   public String retornarTurma() {
     return this.turma;
+  }
+
+  public int retornarMatricula() {
+    return this.matricula;
   }
 
   public int[] notas() {
