@@ -1,6 +1,6 @@
 public class Aluno {
 
-  private String nome, turma;
+  private String nome, turma, situacao;
   private int aulasAssistidas, matricula;
   double desempenho;
   private int[] notas = new int[4];

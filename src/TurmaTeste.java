@@ -9,6 +9,7 @@ public class TurmaTeste {
   @BeforeEach
   public void setup() {
     turma = new Turma(1, 4, "M");
+    turma.adicionarAluno("Fulano", 20, new int[] {23, 22, 24, 19});
   }
 
   @Test
