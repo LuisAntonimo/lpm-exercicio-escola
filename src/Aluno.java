@@ -1,7 +1,4 @@
 public class Aluno {
-  static final int NOTA_MAXIMA = 25;
-  static final int PESO_NOTA = 8;
-  static final int PESO_FREQUENCIA = 2;
 
   private String nome, turma;
   private int aulasAssistidas;

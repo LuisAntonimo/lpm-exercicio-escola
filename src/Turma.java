@@ -4,6 +4,9 @@ public class Turma {
   static final int NUMERO_DE_ATIVIDADES = 4;
   static final int TOTAL_DE_PONTOS = 100;
   static final int NUMERO_DE_AULAS = 20;
+  static final int NOTA_MAXIMA = 25;
+  static final int PESO_NOTA = 8;
+  static final int PESO_FREQUENCIA = 2;
 
   private int nivel, diaDaSemana;
   private String turno, codigoTurma;
