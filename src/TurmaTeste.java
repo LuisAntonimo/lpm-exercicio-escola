@@ -18,4 +18,17 @@ public class TurmaTeste {
     assertEquals("M", turma.turnoDaTurma());
   }
 
+  @Test
+  public void verificarConstructor() {
+    turma = new Turma();
+    assertEquals(0, turma.nivelDaTurma());
+    assertEquals(0, turma.diaDaSemana());
+    assertEquals("", turma.turnoDaTurma());
+  }
+
+  @Test
+  public void retornarCodigoDaTurma() {
+    assertEquals("14M", turma.codigo());
+  }
+
 }

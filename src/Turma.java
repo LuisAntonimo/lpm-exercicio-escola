@@ -1,13 +1,17 @@
+import java.util.ArrayList;
 public class Turma {
   static final int MAXIMO_DE_ALUNOS = 20;
   static final int NUMERO_DE_ATIVIDADES = 4;
   static final int TOTAL_DE_PONTOS = 100;
   static final int NUMERO_DE_AULAS = 20;
+
   private int nivel, diaDaSemana;
-  private String turno;
+  private String turno, codigoTurma;
+
+  private ArrayList<Aluno> listaDeAlunos = new ArrayList<Aluno>();
 
   Turma() {
-    this.setup(0, 0, " ");
+    this.setup(0, 0, "");
   }
 
   Turma(int nivel, int diaDaSemana, String turno) {
@@ -18,6 +22,11 @@ public class Turma {
     this.definirNivel(nivel);
     this.definirDia(diaDaSemana);
     this.definirTurno(turno);
+    this.definirCodigo();
+  }
+
+  private void definirCodigo() {
+    this.codigoTurma = Integer.toString(this.nivelDaTurma()) + this.diaDaSemana() + this.turnoDaTurma();
   }
 
   public void definirNivel(int nivel) {
@@ -42,6 +51,10 @@ public class Turma {
 
   public String turnoDaTurma() {
     return this.turno;
+  }
+
+  public String codigo() {
+    return this.codigoTurma;
   }
   
 }

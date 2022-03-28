@@ -18,8 +18,6 @@
 
 - Métodos:
 
-  - Definir número de atividades (consequentemente o valor de pontos de cada uma);
-
   - Exibir informações de todos os alunos;
 
   - Retornar a média das notas da turma;
