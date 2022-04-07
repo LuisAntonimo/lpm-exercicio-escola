@@ -5,8 +5,6 @@ public class Turma {
   private static final int TOTAL_DE_PONTOS = 100;
   private static final int NUMERO_DE_AULAS = 20;
   private static final int NOTA_MAXIMA = 25;
-  private static final int PESO_NOTA = 8;
-  private static final int PESO_FREQUENCIA = 2;
 
   private static int contador = 0;
 
@@ -122,3 +120,4 @@ public class Turma {
   }
   
 }
+

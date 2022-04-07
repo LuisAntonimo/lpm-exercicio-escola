@@ -10,7 +10,7 @@
 
   - Turno das aulas;
 
-  - Código de turma = Nível + Dia da semna + Turno;
+  - Código de turma = Nível + Dia da semana + Turno;
 
   - Aulas ministradas;
 

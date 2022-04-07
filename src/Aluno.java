@@ -1,9 +1,14 @@
 public class Aluno {
 
-  private String nome, turma, situacao;
+  private static final int PESO_NOTA = 8;
+  private static final int PESO_FREQUENCIA = 2;
+
+  private String nome, turma;
   private int aulasAssistidas, matricula;
   double desempenho;
   private int[] notas = new int[4];
+  private boolean situacao;
+  
 
   Aluno() {
     this.setup("Fulano", "", 0, new int[] {0, 0, 0, 0}, 0);
@@ -31,6 +36,10 @@ public class Aluno {
 
   public void definirNome(String nome) {
     this.nome = nome;
+  }
+
+  public void definirDesempenho(double desempenho) {
+    this.desempenho = desempenho;
   }
   
   public void alterarNota(int index, int nota) {
@@ -75,10 +84,16 @@ public class Aluno {
     return response;
   }
 
-  // public Double retornarDesempenho() {
-  //   double soma = (double) this.somarNotas();
-  //   return ((soma * PESO_NOTA) + (this.retornarAulasAssistidas() * PESO_FREQUENCIA)) / (PESO_NOTA + PESO_FREQUENCIA);
-  // }
+  public void estipularDesempenho() {
+    double soma = (double) this.somarNotas();
+    double desempenho = ((soma * PESO_NOTA) + (this.retornarAulasAssistidas() * PESO_FREQUENCIA)) / (PESO_NOTA + PESO_FREQUENCIA);
+
+    this.definirDesempenho(desempenho);
+  }
+
+  public Double retornarDesempenho() {
+   return this.desempenho;
+  }
 
   
 

@@ -9,11 +9,12 @@ public class AlunoTeste {
 
   @BeforeEach
   public void setup() {
-    fulano = new Aluno();
+    fulano = new Aluno("Luís", "15N", 18, new int[] {23, 21, 15, 23}, 1);
   }
 
   @Test
   public void testarConstructor() {
+    fulano = new Aluno();
     assertEquals("Fulano", fulano.retornarNome());
     assertEquals("", fulano.retornarTurma());
     assertEquals(0, fulano.retornarAulasAssistidas());
@@ -21,8 +22,6 @@ public class AlunoTeste {
 
   @Test
   public void testarConstructorComParametros() {
-    fulano = new Aluno("Luís", "15N", 18, new int[] {23, 21, 15, 23}, 1);
-
     assertEquals("Luís", fulano.retornarNome());
     assertEquals("15N", fulano.retornarTurma());
     assertEquals(18, fulano.retornarAulasAssistidas());
