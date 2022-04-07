@@ -95,6 +95,15 @@ public class Aluno {
    return this.desempenho;
   }
 
+  public void definitSituacao() {
+    double soma = (double) this.somarNotas();
+
+    this.situacao = soma >= 60 && this.retornarAulasAssistidas() >= 15;
+  }
+
+  public boolean retornarSituacao() {
+    return this.situacao;
+  }
   
 
   
